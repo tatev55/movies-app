@@ -1,6 +1,6 @@
 class QuizApi {
   constructor() {
-    this.baseUrl = "http://localhost:3001";
+    this.baseUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
   }
 
   async getQuestions() {
