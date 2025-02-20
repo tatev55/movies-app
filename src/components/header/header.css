@@ -60,6 +60,7 @@
   width: 425px;
   height: 30px;
   padding: .3rem;
+  border-radius: 10px;
 }
 
 .nav-tabs{
@@ -75,12 +76,16 @@
 .nav-item{
   width:140px;
   height: 40px;
-  background-color: #DB202C;
+  background-color:  #E50914;
   border: 0;
   padding: .5rem;
   color: white;
   font-size: 15px;
   text-align: center;
+  border-radius: 10px;
+}
+.nav-item:hover{
+  background-color: #DB202C;
 }
 
 .nav-list{
