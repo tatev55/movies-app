@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import { Header } from "./components/header/header";
+import { SearchMovies } from "./pages/search-movies/search-movies";
+import { Movies } from "./pages/movies/movies";
+import { Quiz } from "./pages/quiz/quiz";
+import { MoviesProvider, tab, MoviesContext } from "./contexts/movies-context";
+
+
+
+const Layout = () => {
+  const { activeTab } = useContext(MoviesContext);
+
+
+
+  return (
+    <>
+      {activeTab === tab.search && <SearchMovies />}
+      {activeTab === tab.movies && <Movies />}
+      {activeTab === tab.quiz && <Quiz />}
+    </>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MoviesProvider>
+      <div>
+        <Header />
+        <Layout />
+      </div>
+    </MoviesProvider>
   );
 }
 
