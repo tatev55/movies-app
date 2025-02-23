@@ -1,11 +1,11 @@
 class QuizApi {
   constructor() {
-    this.baseUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
+    this.baseUrl = "https://simple-blog-api-red.vercel.app";
   }
 
   async getQuestions() {
     try {
-      const response = await fetch(`${this.baseUrl}/questions`);
+      const response = await fetch(`${this.baseUrl}/quiz`);
       const data = await response.json();
       return {
         success: response.status === 200,

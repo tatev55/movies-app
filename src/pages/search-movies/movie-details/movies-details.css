@@ -1,35 +1,48 @@
 .movies-details-container{
-    width: 650px;
+    width: 900px;
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
 
 .poster-list-box{
     width: 48%;
     height: 100%;
+    
+}
+.ul-list{
+    width: 100%;
+    padding: 15px;
 }
 .poster{
     width: 100%;
-    height: 90% ;
+    height: 400px;
 }
-.btn-link{
+.btn-link-favorite{
     background: none;
     position: absolute;
     top: 10px;
     right: 40px;
+    border: 0;
+    
 }
+
 
 .description{
     width: 48%;
     height: 100%;
+    color: white;
 }
 .fa-bookmark{
     position: absolute;
     color: #1B1F3F;
+
     cursor: pointer;
 }
 .text-gray{
-    color: #1B1F3F;
+    /* color: #1B1F3F; */
+    border-bottom: 2px solid #3333;
+    padding: .2rem;
 }

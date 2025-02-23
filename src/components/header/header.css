@@ -49,18 +49,24 @@
   
 }
 .header-text{
-  font-size: 30px;
+  font-size: 40px;
 }
 .header-text, .question-text{
   color: white;
 
 }
 
+
+
 .search-input{
-  width: 425px;
-  height: 30px;
-  padding: .3rem;
-  border-radius: 10px;
+    width: 425px;
+    height: 30px;
+    padding: .5rem;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    border-radius: 5px;
 }
 
 .nav-tabs{
@@ -87,6 +93,7 @@
 .nav-item:hover{
   background-color: #DB202C;
 }
+
 
 .nav-list{
   list-style: none;

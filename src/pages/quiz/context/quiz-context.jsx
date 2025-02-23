@@ -1,10 +1,14 @@
 import { createContext, useReducer } from "react";
 
+
 const QuizContext = createContext();
 
 const initialState = {
   status: "loading",
   questions: [],
+  index: 0,
+  selectedOption: null,
+  score: 0,
 };
 
 function reducer(state, action) {
@@ -23,8 +27,47 @@ function reducer(state, action) {
       };
     case "START":
       return {
+        ...state,
         status: "active",
       };
+    case "SELECT_OPTION":
+      const question = state.questions[state.index];
+      console.log(action.payload);
+      
+      return {
+        ...state,
+        selectedOption: action.payload,
+        score: action.payload === question.correctOption? state.score + question.points: state.score
+        
+      }
+    case "NEXT_QUESTION":
+      return {
+        ...state,
+        index: state.index + 1,
+        selectedOption: null
+      }
+    case "START_AGAIN":
+      return {
+        ...state,
+        index: 0,
+        selectedOption: null,
+        score: 0,
+        status: "active"
+      }
+      case "FINISH":
+        return {
+          ...state,
+          status: "finished",
+        }
+      case "CLOSE_FINISH_SCREEN":
+        return{
+          ...state,
+          status: "ready",
+          index: 0,
+          selectedOption: null,
+          score: 0,
+
+        }
     default:
       throw new Error("Something went wrong can not start the game");
   }
@@ -32,14 +75,10 @@ function reducer(state, action) {
 
 function QuizProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { status, questions } = state;
-
-
   return (
     <QuizContext.Provider
       value={{
-        status,
-        questions,
+        ...state,
         dispatch,
       }}
     >

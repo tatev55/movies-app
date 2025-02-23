@@ -4,6 +4,8 @@ import { SearchMovies } from "./pages/search-movies/search-movies";
 import { Movies } from "./pages/movies/movies";
 import { Quiz } from "./pages/quiz/quiz";
 import { MoviesProvider, tab, MoviesContext } from "./contexts/movies-context";
+import QuestionsSection from "./components/questions-section/questions-section"
+import Footer from "./components/footer/footer"
 
 
 
@@ -27,6 +29,8 @@ function App() {
       <div>
         <Header />
         <Layout />
+        <QuestionsSection />
+        <Footer/>
       </div>
     </MoviesProvider>
   );

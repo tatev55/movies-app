@@ -13,7 +13,7 @@ export const StartScreen = () => {
       <h2>Welcome to The Movie Quiz!</h2>
       <h3>{numberOfQuestions} questions to test your movie knowledge skills</h3>
       <Button
-        className="btn"
+        className="btn-start"
         onClick={() => dispatch({ type: "START" })}
       >
         Let's start

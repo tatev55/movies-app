@@ -1,18 +1,20 @@
-.start {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
+.options-container{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-.btn-start {
+.btn-option {
+  width: 500px;
+  height: 50px;
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
   border-radius: 42px;
   border-width: 0;
-  box-shadow: rgba(120, 100, 100, 0.1) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 2px 8px;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
   color: #FFFFFF;
   cursor: pointer;
   display: flex;
@@ -33,12 +35,23 @@
   vertical-align: baseline;
 }
 
-.btn-start:hover {
+.btn-option:hover {
   background-image: linear-gradient(#B384C9, #391F5B 50%);
 }
 
+.correct {
+  background-color: green;
+  color: white;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+}
+
+.inCorrect {
+  background-color: #E50914;
+  color: white;
+}
+
 @media (min-width: 768px) {
-  .btn-start {
+  .btn-option {
     font-size: 21px;
     padding: 18px 34px;
   }

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { omdbApi } from "../../../api/movie.api";
 import { useLocalStorageState } from "../../../hooks/use-local-storage-state";
 import { Flag } from "../../../components/flag/flag";
+import{Genre} from "../../../components/genre/genre"
 import Button from "../../../components/button/button";
 import "./movies-details.css"
 
@@ -19,6 +20,8 @@ export const MovieDetails = ({ id }) => {
       try {
         const response = await omdbApi.fetchByID(id);
         setMovie(response.data);
+        console.log(response.data);
+        
       } catch (error) {
         console.error("Error fetching movie details:", error);
       }
@@ -74,14 +77,20 @@ export const MovieDetails = ({ id }) => {
               </li>
             ))}
           </ul>
+          <p className="text-gray-awards">
+            <strong>Awards:</strong> {movie.Awards}
+          </p>
+          <p className="text-gray-box">
+            <strong>Box Office:</strong> {movie.BoxOffice}
+          </p>
         </div>
         <div className="description">
           <p className="text-description">
-            <span>
+            <span className="text-gray">
               <strong>Directed by:</strong> {movie.Director}
             </span>
             <Button
-              className="btn btn-link"
+              className="btn-link-favorite"
               onClick={handelUpdateFavoriteStatus}
             >
               {isMovieFavorite ? (
@@ -92,47 +101,46 @@ export const MovieDetails = ({ id }) => {
               ) : (
                 
                 <i className="fa-solid fa-bookmark"
-                  style={{ fontSize: "2rem", color: "#1B1F3F" }}
+                  style={{ fontSize: "2rem", color: "#E50914" }}
                 ></i>
               )}
             </Button>
           </p>
           <p className="text-gray">
-            <strong>Writer:</strong> {movie.Writer}
+            <strong>Writer :</strong> {movie.Writer}
           </p>
           <p className="text-gray">
-            <strong>Actors:</strong> {movie.Actors}
+            <strong>Actors :</strong> {movie.Actors}
           </p>
           <p className="text-gray">
-            <strong>Genre:</strong> {movie.Genre}
+            <strong>Genre :</strong> {movie.Genre}
+            {(movie.Genre || "").split(", ").map((genre, index) => (
+              <Genre key={index} genre={genre} />
+              
+              
+            ))}
           </p>
           <p className="text-gray">
-            <strong>Language:</strong> {movie.Language}
+            <strong>Language :</strong> {movie.Language}
           </p>
           <p className="text-gray">
-            <strong>Countries:</strong>
+            <strong>Countries : </strong>
             {(movie.Country || "").split(", ").map((country, index) => (
               <Flag key={country} country={country} />
             ))}
           </p>
           <p className="text-gray">
-            <strong>Released:</strong> {movie.Released}
+            <strong>Released :</strong> {movie.Released}
           </p>
           <p className="text-gray">
-            <strong>Runtime:</strong> {movie.Runtime}
+            <strong>Runtime :</strong> {movie.Runtime}
           </p>
           <p className="text-gray">
             <strong>IMDb Votes :</strong> {movie.imdbRating} ({movie.imdbVotes}{" "}
             votes)
           </p>
 
-          <p >{movie.Plot}</p>
-          <p className="text-gray">
-            <strong>Box Office:</strong> {movie.BoxOffice}
-          </p>
-          <p className="text-gray">
-            <strong>Awards:</strong> {movie.Awards}
-          </p>
+          <p className="text-gray">{movie.Plot}</p>
         </div>
       </div>
     </div>

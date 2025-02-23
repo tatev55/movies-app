@@ -59,6 +59,8 @@ export const SearchMovies = () => {
   const fetchMovies = async (page = state.currentPage) => {
     dispatch({ type: "SET_LOADING" });
     const response = await omdbApi.fetchMoviesBySearch(searchQuery || "", page)
+    
+    
 
     if (response.success) {
       const totalPages = Math.ceil(response.data.totalResults / 10);
@@ -82,6 +84,8 @@ export const SearchMovies = () => {
 
     timeoutIdRef.current = toId;
   }, [searchQuery]);
+  
+  
 
   const handleCardClick = (movie) => {
     dispatch({
