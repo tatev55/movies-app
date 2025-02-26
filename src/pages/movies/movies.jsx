@@ -4,7 +4,6 @@ import "./movies.css"
 
 export const Movies = () => {
   const [moviesState] = useLocalStorageState([], "movies");
-
   return (
     <div className="movies-container" >
       <h1 className ="my-movies">My Movies</h1>

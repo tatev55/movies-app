@@ -1,27 +1,27 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { QuizContext } from "../../context/quiz-context";
 import "./timer.css"
 
 const Timer = ()=> {
 
-    const { questions, dispatch } = useContext(QuizContext);
-    const [time, setTime] = useState(questions.length * 60);
+    const { gameTime, dispatch } = useContext(QuizContext);
+
 
     useEffect(()=> {
-        if(time <= 0){
+        if(gameTime <= 0){
             dispatch({type: "FINISH"});
             return
         }
 
         const interval = setInterval(()=> {
-            setTime((prevTime) => prevTime-1);
+            dispatch({type: "TIME"})
         }, 1000)
 
         return(() => clearInterval(interval))
-    }, [time, dispatch])
+    }, [gameTime, dispatch])
 
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
+    const minutes = Math.floor( gameTime/ 60);
+    const seconds = gameTime % 60;
     const formattedTime = `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
 
     

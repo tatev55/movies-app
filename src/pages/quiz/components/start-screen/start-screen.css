@@ -37,9 +37,4 @@
   background-image: linear-gradient(#B384C9, #391F5B 50%);
 }
 
-@media (min-width: 768px) {
-  .btn-start {
-    font-size: 21px;
-    padding: 18px 34px;
-  }
-}
+

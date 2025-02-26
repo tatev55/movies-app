@@ -121,6 +121,8 @@ export const SearchMovies = () => {
     }
   };
 
+  
+
   return (
     <div className="search-movies-container">
       {state.loading? (

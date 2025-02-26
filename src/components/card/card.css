@@ -44,15 +44,19 @@
 .title-movie{
     font-size: 20px;
 }
-
-.btn{
+.watch-btn{
     background-color:  #E50914;
     color: white;
-    padding: .3rem;
+    padding: .5rem ;
+    border-radius: 10px;
     border: 0;
-    
+    cursor: pointer;
 }
 
-.btn:hover{
+
+.watch-btn:hover{
     background-color: #DB202C;
 }
+
+
+

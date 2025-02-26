@@ -20,7 +20,7 @@ export const MovieDetails = ({ id }) => {
       try {
         const response = await omdbApi.fetchByID(id);
         setMovie(response.data);
-        console.log(response.data);
+  
         
       } catch (error) {
         console.error("Error fetching movie details:", error);

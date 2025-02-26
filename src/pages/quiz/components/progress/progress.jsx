@@ -4,13 +4,13 @@ import "./progress.css"
 
 
 const Progress = ()=>{
-    const { questions, index, score, selectedOption} = useContext(QuizContext)
+    const { questions, index, score,maxScore, selectedOption} = useContext(QuizContext)
     
     return (
         <div className = "progress-quiz">
             <p className = "number-questions">
                 <strong>Questions </strong>
-                {index + 1 }/{questions.length}
+                {index + 1 } / {questions.length}
             </p>
 
             <progress
@@ -20,7 +20,7 @@ const Progress = ()=>{
             
             <p className = "points">
                 <strong>Quiz-score </strong>
-                {score} / {questions.length * 10}
+                {score} / {maxScore}
             </p>
         </div>
         

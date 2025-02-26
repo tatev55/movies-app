@@ -22,7 +22,7 @@ const QuizApp = () => {
         dispatch({ type: "DATA_FAILED" });
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="quiz-game mt-4">

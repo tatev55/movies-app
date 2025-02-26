@@ -5,7 +5,7 @@ import Button from "../../../../components/button/button";
 import "./finished-screen.css"
 
 const FinishScreen = ()=>{
-    const {questions, score, dispatch} = useContext(QuizContext);
+    const {questions, score, maxScore, dispatch, correctAnswers, wrongAnswers} = useContext(QuizContext);
 
 
     const handleStartAgain =()=>{
@@ -16,14 +16,28 @@ const FinishScreen = ()=>{
         dispatch({type: "CLOSE_FINISH_SCREEN"});
     }
 
+    const getEmojiIcon = (score) => {
+        if (score === 100) {
+            return "Perfect! 🏆";
+        } else if (score >= 80) {
+            return "Well Done! 🎉";
+        } else if (score >= 50) {
+            return "Okay 😐";
+        } else if (score > 0) {
+            return "Better luck next time 🤞";
+        } else {
+            return "";
+        }
+    }
+
 
     return(
         <div className="finish-screen">
             <div className = 'result-container'>
                 <div className = "circle-box">
-                    {score}<span>of {questions.length * 10}</span>
+                    {score}%<span>of {maxScore}%</span>
                 </div>
-                <h2 className = "result-text">{score < 20? "Bad!": "Great!"}</h2>
+                <h2 className = "result-text">{getEmojiIcon(score)}</h2>
                 <span>You scored higher than 65% of the people who have taken these tests</span>
             </div>
             <div className="summery-container">
@@ -32,15 +46,15 @@ const FinishScreen = ()=>{
                     <strong>{questions.length}</strong>
                 </p>
                 <p className = "summery-text">Number of correct answers
-                    <strong>{score/ 10}</strong>
+                    <strong>{correctAnswers}</strong>
                 </p>
                 <p className = "summery-text">Number of wrong answers
-                    <strong>{questions.length - (score /10)}</strong>
+                    <strong>{wrongAnswers}</strong>
                 </p>
                 <Button className = "btn-start-again"
                     onClick={handleStartAgain}>
                     Start Again
-                    </Button>
+                </Button>
             </div>
             <Button className = 'close-finished-screen'
                 onClick={handleCloseFinishedScreen}>

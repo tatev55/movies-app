@@ -49,9 +49,9 @@
   
 }
 .header-text{
-  font-size: 40px;
+  font-size: 45px;
 }
-.header-text, .question-text{
+.header-text, .about-text{
   color: white;
 
 }
@@ -101,9 +101,20 @@
 
 .fa-chevron-right{
   margin-left: 10px;
+  transition: transform 0.5s ease; 
   transform: rotate(0);
 }
 
 .active{
   transform: rotate(90deg);
 }
+.about-text{
+  font-size: 20px;
+}
+
+
+
+
+
+
+

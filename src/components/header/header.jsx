@@ -23,7 +23,7 @@
         </div>
           <header className = "header">
           <h2 className="header-text">Unlimited movies, TV shows, and more</h2>
-          <p className="question-text">Ready to watch? Enter your email to create or restart your membership.</p>
+          <p className="about-text">Yoy can search for your favorite movie and watch.</p>
               <input
                 ref={inputRef}
                 value={searchQuery}

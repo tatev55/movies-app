@@ -16,8 +16,8 @@ const Questions = ()=>{
 
     return (
         <div>
-        <h2 className = "question">{questionText.question}</h2>
-        <Option options = {questionText.options}/>
+            <h2 className = "question">{questionText.question}</h2>
+            <Option options = {questionText.options}/>
         </div>
     )
 }

@@ -20,7 +20,7 @@ const Footer = ()=>{
     }
     return(
         <div className = 'quiz-footer'>
-            <Timer/>
+            <Timer  />
             {selectedOption !== null && 
             <Button 
                 onClick={handleNextButton}
