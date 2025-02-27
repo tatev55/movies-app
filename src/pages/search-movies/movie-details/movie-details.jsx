@@ -135,12 +135,12 @@ export const MovieDetails = ({ id }) => {
           <p className="text-gray">
             <strong>Runtime :</strong> {movie.Runtime}
           </p>
-          <p className="text-gray">
+          <p className="text-gray votes">
             <strong>IMDb Votes :</strong> {movie.imdbRating} ({movie.imdbVotes}{" "}
             votes)
           </p>
 
-          <p className="text-gray">{movie.Plot}</p>
+          <p className="text-gray plot">{movie.Plot}</p>
         </div>
       </div>
     </div>

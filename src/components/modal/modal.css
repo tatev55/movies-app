@@ -47,6 +47,13 @@
     background-color: #DB202C;;
 }
 
+@media (max-width: 940px){
+    .modal-container {
+        width: auto;
+        height: auto;
+    }
+}
+
 
 
     

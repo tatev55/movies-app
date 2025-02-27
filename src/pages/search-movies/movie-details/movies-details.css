@@ -46,6 +46,32 @@
     padding: .2rem;
 }
 
+@media (max-width: 940px){
+    .movies-details-container{
+        width: auto;
+        height: auto;
+    }
+    .votes{
+        display: none;
+    }
+
+    .plot{
+        display: none;
+    }
+   
+    .ul-list{
+        display: none;
+    }
+
+    .text-gray-awards{
+        display: none;
+    }
+
+    .text-gray-box{
+        display: none;
+    }
+}
+
 
 
 
