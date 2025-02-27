@@ -116,5 +116,32 @@
 
 
 
+@media (max-width: 767px) {
+    .search-input{
+      width: 150px;
+    }
 
+    .nav-tabs{
+      flex-direction: column;
+    }
+
+    .header-text{
+      font-size: 20px;
+    }
+
+    .about-text{
+      font-size: 17px;
+    }
+
+    .nav-item{
+      margin: 10px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 992px){
+  .header-text{
+    font-size: 30px;
+  }
+
+}
 

@@ -39,6 +39,38 @@
     color: #656565;
 }
 
+@media (max-width: 767px){
+    .about-text{
+        display: none;
+    }
+
+    .footer-text{
+        height: 100px;
+    }
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 992px){
+    .footer-content{
+        justify-content: center;
+    }
+    .about-text{
+        display: none;
+    }
+
+    .footer-text{
+        width: 300px;
+        height: 100px;
+    }
+
+    
+}
+
 
 
 

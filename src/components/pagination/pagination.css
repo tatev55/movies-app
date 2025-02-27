@@ -36,6 +36,12 @@
 }
 
 
+@media (max-width: 767px){
+    .page-btn{
+        padding: 5px 10px;
+    }
+}
+
 
 
 

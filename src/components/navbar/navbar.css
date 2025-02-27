@@ -15,3 +15,18 @@
 .link:hover{
     color: #DB202C;
 }
+
+@media (max-width: 767px){
+    .navbar-container{
+        width: 450px;
+        display: flex;
+        flex-direction: inherit;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 992px){
+    .navbar-container{
+        height: 150px;
+    }
+}
