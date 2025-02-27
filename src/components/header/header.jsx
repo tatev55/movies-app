@@ -18,7 +18,7 @@
       <div className="header-container">
         <div className="transparent-background"></div>
         <div className="title-app">
-          <h1>Movies</h1>
+          <h1 className = "movies-title">Movies</h1>
           <i className="fa-solid fa-film"></i>
         </div>
           <header className = "header">

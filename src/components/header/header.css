@@ -136,8 +136,28 @@
     .nav-item{
       margin: 10px;
     }
+  
+    .header-container{
+      width: 96%;
+      height: 450px;
+      
+    }
+  
+    .transparent-background{
+      width: 96%;
+      height: 450px;
+      
+    }
+  
+    .fa-film{
+      font-size: 30px
+    }
+  
+    .movies-title{
+      font-size: 25px;
+    }
 }
-
+  
 @media(min-width: 768px) and (max-width: 992px){
   .header-text{
     font-size: 30px;

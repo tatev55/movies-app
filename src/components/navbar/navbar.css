@@ -20,7 +20,7 @@
     .navbar-container{
         width: 450px;
         display: flex;
-        flex-direction: inherit;
+        /* flex-direction: inherit; */
         justify-content: space-between;
     }
 }

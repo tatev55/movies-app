@@ -40,6 +40,10 @@
     .page-btn{
         padding: 5px 10px;
     }
+
+    .page{
+        display: none;
+    }
 }
 
 
