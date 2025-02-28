@@ -46,30 +46,80 @@
     padding: .2rem;
 }
 
-@media (max-width: 940px){
+@media (max-width: 768px){
     .movies-details-container{
-        width: auto;
-        height: auto;
-    }
-    .votes{
-        display: none;
+        width: 600px;
+        height: 500px;
+        overflow: auto;
+        flex-direction: column;
+       
     }
 
-    .plot{
-        display: none;
+    
+
+    .poster-list-box{
+        width: 100%;
+        height: 48%;
     }
-   
+
+    .poster{
+        width: 90%;
+        height: 100%;
+    }
+
     .ul-list{
         display: none;
     }
 
-    .text-gray-awards{
+    .description{
+        width: 100%;
+    }
+
+    .text-gray-awards, .text-gray-box{
         display: none;
     }
 
-    .text-gray-box{
+    
+    
+}
+
+
+
+@media (max-width: 550px){
+    .movies-details-container{
+        width: 600px;
+        height: 500px;
+        overflow: auto;
+        flex-direction: column;
+       
+    }
+
+    
+
+    .poster-list-box{
+        width: 100%;
+        height: 48%;
+    }
+
+    .poster{
+        width: 80%;
+        height: 100%;
+    }
+
+    .ul-list{
         display: none;
     }
+
+    .description{
+        width: 100%;
+    }
+
+    .text-gray-awards, .text-gray-box{
+        display: none;
+    }
+
+    
+    
 }
 
 

@@ -38,7 +38,7 @@ const FinishScreen = ()=>{
                     {score}%<span>of {maxScore}%</span>
                 </div>
                 <h2 className = "result-text">{getEmojiIcon(score)}</h2>
-                <span>You scored higher than 65% of the people who have taken these tests</span>
+                <span className = "info-text">You scored higher than 65% of the people who have taken these tests</span>
             </div>
             <div className="summery-container">
                 <h2 className = "summery-title">Summary</h2>

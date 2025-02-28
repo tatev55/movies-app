@@ -15,7 +15,7 @@
 }
 .modal-container {
     width: 900px;
-    max-height: 800px;
+    max-height: 700px;
     position: relative;
     background-color: #070B1C;
     padding: 20px;
@@ -47,10 +47,18 @@
     background-color: #DB202C;;
 }
 
-@media (max-width: 940px){
+@media (max-width: 768px){
+    .modal-container{
+        width: 90%;
+        max-width: 600px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 375px) {
     .modal-container {
-        width: auto;
-        height: auto;
+        width: 90%; 
+        padding: 10px;
     }
 }
 

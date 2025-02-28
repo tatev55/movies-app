@@ -86,7 +86,7 @@ export const MovieDetails = ({ id }) => {
         </div>
         <div className="description">
           <p className="text-description">
-            <span className="text-gray">
+            <span className="text-gray director">
               <strong>Directed by:</strong> {movie.Director}
             </span>
             <Button
@@ -106,7 +106,7 @@ export const MovieDetails = ({ id }) => {
               )}
             </Button>
           </p>
-          <p className="text-gray">
+          <p className="text-gray writer">
             <strong>Writer :</strong> {movie.Writer}
           </p>
           <p className="text-gray">

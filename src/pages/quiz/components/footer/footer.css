@@ -48,5 +48,15 @@
   .next-btn:hover span {
     background: none;
   }
+
+  @media(max-width: 768px){
+    .quiz-footer{
+      width: 80%;
+    }
+    .next-btn{
+      font-size: 10px;
+      padding: .2rem;
+    }
+  }
   
  

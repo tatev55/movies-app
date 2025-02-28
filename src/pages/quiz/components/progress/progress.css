@@ -33,6 +33,16 @@
     border-radius: 100px;
   }
 
+  @media(max-width: 768px){
+    .progress-quiz{
+      width: 90%;
+    }
+
+    .number-questions, .points{
+      font-size: 17px;
+    }
+  }
+
 
 
 

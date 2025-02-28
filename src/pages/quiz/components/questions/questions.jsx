@@ -15,7 +15,7 @@ const Questions = ()=>{
     
 
     return (
-        <div>
+        <div className="questions-container">
             <h2 className = "question">{questionText.question}</h2>
             <Option options = {questionText.options}/>
         </div>

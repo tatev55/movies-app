@@ -1,8 +1,11 @@
 .start {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
+ 
 }
 
 
@@ -35,6 +38,12 @@
 
 .btn-start:hover {
   background-image: linear-gradient(#B384C9, #391F5B 50%);
+}
+
+@media(max-width: 768px){
+  .start{
+    text-align: center;
+  }
 }
 
 

@@ -116,9 +116,10 @@
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+
     .search-input{
-      width: 150px;
+      width: 200px;
     }
 
     .nav-tabs{
@@ -134,7 +135,8 @@
     }
 
     .nav-item{
-      margin: 10px;
+      width: 220px;
+      margin: 5px;
     }
   
     .header-container{

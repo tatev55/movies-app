@@ -50,9 +50,14 @@
   color: white;
 }
 
-@media (min-width: 768px) {
-  .btn-option {
-    font-size: 21px;
-    padding: 18px 34px;
+@media (max-width: 768px) {
+  .options-container{
+    width: 200px;
+  }
+  
+
+  .btn-option{
+    width: 300px ;
+  
   }
 }
