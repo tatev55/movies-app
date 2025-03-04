@@ -119,8 +119,7 @@
     }
 
     .summery-title{
-        font-size: 18px;
-        margin-top: 20px;
+        display: none;
     }
 
     .circle-box{
