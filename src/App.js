@@ -26,7 +26,7 @@ const Layout = () => {
 function App() {
   return (
     <MoviesProvider>
-      <div>
+      <div className = "app-container">
         <Header />
         <Layout />
         <QuestionsSection />

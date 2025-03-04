@@ -9,7 +9,7 @@ const Progress = ()=>{
     return (
         <div className = "progress-quiz">
             <p className = "number-questions">
-                <strong>Questions </strong>
+                <strong className="number-questions">Questions </strong><br/>
                 {index + 1 } / {questions.length}
             </p>
 
@@ -19,7 +19,7 @@ const Progress = ()=>{
             </progress>
             
             <p className = "points">
-                <strong>Quiz-score </strong>
+                <strong>Quiz-score </strong><br/>
                 {score} / {maxScore}
             </p>
         </div>
